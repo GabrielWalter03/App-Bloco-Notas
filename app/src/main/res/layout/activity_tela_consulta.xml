@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaConsultaActivity"
+    android:backgroundTint="@color/colorDarkGray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:backgroundTint="@color/colorDarkGray">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGray"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_data_consulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_et"
+                android:text="Data: "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_assunto_consulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Assunto:"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/et_nome_consulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/round_et"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:backgroundTint="@color/colorDarkGray">
+
+            <TextView
+                android:id="@+id/tv_textoConsulta"
+                android:layout_width="match_parent"
+                android:textSize="17dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Texto:" />
+
+            <EditText
+                android:id="@+id/et_textoConsulta"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:ems="10"
+                android:gravity="top"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/round_et"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/colorDarkGray">
+
+            <Button
+                android:id="@+id/btn_anterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="registroAnterior"
+                android:background="@drawable/round_bt"
+                android:layout_margin="10dp"
+                android:text="Anterior" />
+
+            <Button
+                android:id="@+id/btn_proximo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_bt"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:onClick="proximoRegistro"
+                android:text="Próximo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:backgroundTint="@color/colorDarkGray">
+
+            <Button
+                android:id="@+id/btn_excluir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="excluirRegistro"
+                android:background="@drawable/round_bt"
+                android:layout_margin="2dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Excluir" />
+
+            <Button
+                android:id="@+id/btn_voltar_consulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="fecharTela"
+                android:background="@drawable/round_bt"
+                android:layout_margin="2dp"
+                android:text="Voltar" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
